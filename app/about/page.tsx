@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import TableOfContents from '@/components/TableOfContents';
 
 
@@ -18,6 +18,8 @@ const tocItems = [
 
 export default function AboutPage() {
   const [showFullContent, setShowFullContent] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const video1Ref = useRef<HTMLVideoElement>(null);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
@@ -160,7 +162,7 @@ export default function AboutPage() {
             {/* Photo */}
             <div className="intro-photo">
               <img
-                src="/images/about/profile.jpg"
+                src="/images/about/profile.png"
                 alt="Priscilla Skylar Lee"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
@@ -169,7 +171,7 @@ export default function AboutPage() {
             {/* Text */}
             <div className="intro-text">
               <p style={{ fontSize: 'var(--text-md)', marginBottom: 0, color: 'var(--muted)' }}>
-                I build for humans, which means building for imperfection. Collaboration is key... figuring out what matters, testing assumptions, learning what doesn't work, what does, and growing together each step of the way. Solutions aren't found alone or on the first attempt. They emerge through iteration, dwelling with the problem and the people you're solving it with. Not graceful, not immediate, never easy – but always meaningful.
+                I build for humans, which means building for imperfection — figuring out what matters, testing assumptions, learning what works, and what doesn't. The strongest solutions come from people willing to dwell in the problem together.<br /><br />Sit in the mud with me.
               </p>
             </div>
           </div>
@@ -262,25 +264,39 @@ export default function AboutPage() {
           {/* Photo Grid */}
           <div className="mixed-grid" style={{ marginBottom: 'var(--space-8)' }}>
             <div className="mixed-grid-item">
-              <img
-                src="/images/about/photo-1.jpg"
-                alt="Activity or hobby"
+              <video
+                ref={video1Ref}
+                loop
+                muted
+                playsInline
+                poster="/images/about/photo-1-poster.jpg"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
+                onMouseEnter={() => video1Ref.current?.play()}
+                onMouseLeave={() => { video1Ref.current?.pause(); video1Ref.current?.load(); }}
+              >
+                <source src="/images/about/photo-1.mp4" type="video/mp4" />
+              </video>
             </div>
             <div className="mixed-grid-item">
               <img
                 src="/images/about/photo-2.jpg"
                 alt="Activity or hobby"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', objectPosition: 'center 65%' }}
               />
             </div>
             <div className="mixed-grid-item">
-              <img
-                src="/images/about/photo-3.jpg"
-                alt="Activity or hobby"
+              <video
+                ref={videoRef}
+                loop
+                muted
+                playsInline
+                poster="/images/about/photo-3-poster.jpg"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
+                onMouseEnter={() => videoRef.current?.play()}
+                onMouseLeave={() => { videoRef.current?.pause(); videoRef.current?.load(); }}
+              >
+                <source src="/images/about/photo-3.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
 
@@ -416,7 +432,7 @@ export default function AboutPage() {
             </p>
 
             <p className="content-block">
-                Outside of work, you'll find me training for my next triathlon, coaching competitive dodgeball, singing my heart out a hardcore concert, breaking something apart to learn how it works, or dialing in my V60 brew.
+                Outside of work, you'll find me training for my next triathlon, coaching competitive dodgeball, swimming with seals, singing my heart out a hardcore concert, climbing a mountain, breaking something apart to learn how it works, or dialing in my V60 brew.
             </p>
 
             <p className="content-block">

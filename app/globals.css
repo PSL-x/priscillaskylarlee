@@ -423,6 +423,32 @@ p {
   display: block;
 }
 
+.mobile-footer {
+  display: block;
+}
+
+@media (min-width: 48rem) {
+  .mobile-footer {
+    display: none;
+  }
+}
+
+.hide-when-toc {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .hide-when-toc {
+    display: block;
+  }
+}
+
+@media (min-width: 87.5rem) {
+  .hide-when-toc {
+    display: none;
+  }
+}
+
 .project-navigation {
   display: flex;
 }
@@ -486,6 +512,11 @@ h1, h2, h3 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeInPlace {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .fade-in {

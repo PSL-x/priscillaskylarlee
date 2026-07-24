@@ -1,11 +1,10 @@
 ---
 title: "DNA Design System: Claude Code Setup"
 date: "2026-04-20"
-tags: ["design systems", "process", "ai"]
+tags: ["design"]
 excerpt: "How I built a lightweight onboarding system to bring Claude Code to our design team. No git knowledge required."
 ---
 
-# DNA Design System: Claude Code Setup
 
 Designers on my team were just starting to use Claude. The outputs were generic and they were struggling getting it to "look like Fiori". It was taking people more time to go back and forth with Claude than it was for them to be making the artifacts on their own, and they were getting frustrated.
 
@@ -17,7 +16,7 @@ Beyond output quality, there was a setup problem. Most designers on the team had
 
 ## The Setup
 
-I wrote a shell script that handles everything in one command. Designers step through it without needing prior knowledge of git or the terminal.
+I wrote a shell script that handles everything in one command. Designers can go through it without needing prior knowledge of git or the terminal.
 
 What the script does:
 
@@ -29,7 +28,7 @@ What the script does:
 6. Promotes any MCP servers already installed at project level to global scope
 7. Walks through enabling the Figma desktop MCP server inside the Figma app
 
-The global MCP registration is the part I care about most. A design system is only as consistent as its source of truth, and registering these servers globally means Claude's frame of reference is the same across every designer's machine: the same component libraries, the same Figma connection, the same version of what we've built.
+A design system is only as consistent as its source of truth, and registering these servers globally means Claude's frame of reference is the same across every designer's machine: the same component libraries, the same Figma connection, the same version of what we've built.
 
 ## How the Repo is Structured
 

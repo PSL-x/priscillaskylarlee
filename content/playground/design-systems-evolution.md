@@ -1,11 +1,10 @@
 ---
 title: "How Design Systems Evolve"
 date: "2026-03-05"
-tags: ["design", "thinking"]
+tags: ["design", "thoughts for the void"]
 excerpt: "Thoughts on the lifecycle of design systems and why the best ones are never really done. Some patterns emerge from observing how teams actually work."
 ---
 
-# How Design Systems Evolve
 
 Four design systems built or maintained so far, enough to see the pattern repeat.
 

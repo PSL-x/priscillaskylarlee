@@ -41,13 +41,19 @@ export default function Sidebar() {
   const isActive = (href: string) => pathname === href;
 
   const isWorkPath = pathname.startsWith('/work/');
-  const workItems = workProjects.map(p => ({ name: p.title, path: `/work/${p.slug}` }));
-  const topLevelItems = navLinks.map(l => ({ name: l.label, path: l.href }));
+  const isPlaygroundSlug = pathname.startsWith('/playground/') && pathname !== '/playground/';
 
-  const navItems = isWorkPath ? workItems : topLevelItems;
-  const currentIndex = navItems.findIndex(item => item.path === pathname);
-  const prevItem = currentIndex > 0 ? navItems[currentIndex - 1] : null;
-  const nextItem = currentIndex < navItems.length - 1 ? navItems[currentIndex + 1] : null;
+  const circularNav = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Playground', path: '/playground' },
+    { name: 'Project - D&A Design System', path: '/work/dna-designsystem' },
+    { name: 'Project - Consistency & Standardization', path: '/work/consistency-standardization' },
+  ];
+
+  const currentIndex = circularNav.findIndex(item => item.path === pathname);
+  const prevItem = currentIndex >= 0 ? circularNav[(currentIndex - 1 + circularNav.length) % circularNav.length] : null;
+  const nextItem = currentIndex >= 0 ? circularNav[(currentIndex + 1) % circularNav.length] : null;
 
   return (
     <>
@@ -72,7 +78,32 @@ export default function Sidebar() {
         aria-label="Mobile navigation"
       >
         <div style={{ flex: 1, maxWidth: '40%', display: 'flex', justifyContent: 'flex-start' }}>
-          {prevItem && (
+          {isPlaygroundSlug ? (
+            <Link
+              href="/playground"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 'var(--space-1)',
+                color: 'var(--muted)',
+                textDecoration: 'none',
+                fontSize: 'var(--text-sm)',
+                minWidth: '44px',
+                minHeight: '44px',
+                transition: 'color 0.2s'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--foreground)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}
+              aria-label="Back to Playground"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+              <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                Playground
+              </span>
+            </Link>
+          ) : prevItem && (
             <Link
               href={prevItem.path}
               style={{
@@ -146,7 +177,7 @@ export default function Sidebar() {
               <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                 {nextItem.name}
               </span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </Link>
@@ -272,39 +303,55 @@ export default function Sidebar() {
                       cursor: 'pointer',
                       textAlign: 'left',
                       width: '100%',
-                      fontFamily: 'inherit'
+                      fontFamily: 'inherit',
+                      position: 'relative',
+                      minHeight: '2rem',
                     }}
                   >
                     Email Me
-                    <span style={{ position: 'relative', display: 'inline-flex' }}>
+                    <span style={{ display: 'inline-flex' }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.6 }}>
                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
                         <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
                       </svg>
                     </span>
+                    {showCopiedToast && (
+                      <span
+                        style={{
+                          position: 'absolute',
+                          left: '7rem',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          backgroundColor: 'var(--foreground)',
+                          color: 'var(--background)',
+                          padding: 'var(--space-1) var(--space-2)',
+                          borderRadius: '0.25rem',
+                          fontSize: 'var(--text-xs)',
+                          whiteSpace: 'nowrap',
+                          zIndex: 100,
+                          animation: 'fadeInPlace 0.2s ease-out'
+                        }}
+                        role="status"
+                        aria-live="polite"
+                      >
+                        Email copied to clipboard
+                        <span
+                          style={{
+                            position: 'absolute',
+                            left: '-0.25rem',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            width: 0,
+                            height: 0,
+                            borderTop: '0.25rem solid transparent',
+                            borderBottom: '0.25rem solid transparent',
+                            borderRight: '0.25rem solid var(--foreground)'
+                          }}
+                          aria-hidden="true"
+                        />
+                      </span>
+                    )}
                   </button>
-                  {showCopiedToast && (
-                    <span
-                      style={{
-                        position: 'absolute',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        bottom: 'calc(100% + var(--space-1))',
-                        backgroundColor: 'var(--foreground)',
-                        color: 'var(--background)',
-                        padding: 'var(--space-1) var(--space-2)',
-                        borderRadius: '0.25rem',
-                        fontSize: 'var(--text-xs)',
-                        whiteSpace: 'nowrap',
-                        zIndex: 100,
-                        animation: 'fadeIn 0.2s ease-out'
-                      }}
-                      role="status"
-                      aria-live="polite"
-                    >
-                      Email copied to clipboard
-                    </span>
-                  )}
                 </div>
               </div>
 
@@ -560,7 +607,7 @@ export default function Sidebar() {
                       fontSize: 'var(--text-xs)',
                       whiteSpace: 'nowrap',
                       zIndex: 100,
-                      animation: 'fadeIn 0.2s ease-out'
+                      animation: 'fadeInPlace 0.2s ease-out'
                     }}
                     role="status"
                     aria-live="polite"

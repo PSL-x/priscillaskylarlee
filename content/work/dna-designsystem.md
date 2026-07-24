@@ -30,7 +30,7 @@ The design system has reduced design-to-development time by 30%, achieved WCAG 2
 
 An example of cross-consistency work: Diagram Node.
 
-![Diagram Node Before / After](/images/work/dna-diagram-beforeafter.png)
+![Diagram Node Before / After](/images/work/dna-diagram-beforeafter.gif)
 ![Revised DNA Diagram Node - Interactive States and Usage](/images/work/dna-diagram-new.png)
 
 

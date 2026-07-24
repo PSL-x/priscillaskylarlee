@@ -1,5 +1,4 @@
 export interface Concert {
-  number: number;
   artists: string[];
   headline: string;
   venue: string;
@@ -24,7 +23,32 @@ export interface GraphEdge {
 
 export const concerts: Concert[] = [
   {
-    number: 92,
+    artists: ['Jimmy Eat World', 'Illuminati Hotties', 'Motion City Soundtrack'],
+    headline: 'Jimmy Eat World',
+    venue: 'Doug Mitchell Thunderbird Sports Centre',
+    city: 'Vancouver, BC',
+    date: '2026-07-19',
+    year: 2026,
+    notes: '25 Years of Bleed American',
+  },
+  {
+    artists: ['Movements', 'Balance and Composure', 'Midrift', 'Niis'],
+    headline: 'Movements',
+    venue: 'Showbox SoDo',
+    city: 'Seattle, WA',
+    date: '2026-10-07',
+    year: 2026,
+    notes: 'Happier Now USA Tour',
+  },
+  {
+    artists: ['Palace'],
+    headline: 'Palace',
+    venue: 'Chan Centre',
+    city: 'Vancouver, BC',
+    date: '2026-10-16',
+    year: 2026,
+  },
+  {
     artists: ['Coldplay'],
     headline: 'Coldplay',
     venue: 'Volvo Ocean Race Destination Village',
@@ -34,7 +58,6 @@ export const concerts: Concert[] = [
     notes: 'Mylo Xyloto Tour',
   },
   {
-    number: 91,
     artists: ['30 Seconds to Mars'],
     headline: '30 Seconds to Mars',
     venue: 'du Arena',
@@ -44,7 +67,6 @@ export const concerts: Concert[] = [
     notes: 'Into the Wild Tour',
   },
   {
-    number: 90,
     artists: ['Foxing', 'Now, Now'],
     headline: 'Foxing',
     venue: 'Biltmore Cabaret',
@@ -53,7 +75,6 @@ export const concerts: Concert[] = [
     year: 2019,
   },
   {
-    number: 89,
     artists: ['Seahaven'],
     headline: 'Seahaven',
     venue: 'Biltmore Cabaret',
@@ -63,7 +84,6 @@ export const concerts: Concert[] = [
     notes: 'Exact date unconfirmed',
   },
   {
-    number: 98,
     artists: ['Enter Shikari', 'Hands Like Houses', 'The White Noise'],
     headline: 'Enter Shikari',
     venue: 'The Gramercy Theatre',
@@ -73,7 +93,6 @@ export const concerts: Concert[] = [
     notes: 'The Mindsweep Tour',
   },
   {
-    number: 97,
     artists: ['Ra Ra Riot', 'Three Days Grace', 'Soundgarden', 'Billy Talent', 'Arkells', 'Death Cab for Cutie', 'Dropkick Murphys', 'Edward Sharpe & the Magnetic Zeros', 'The John Butler Trio', 'Mother Mother', 'A Perfect Circle', 'Rise Against', 'Skrillex', 'Tegan and Sara'],
     headline: 'Ottawa Bluesfest 2011',
     venue: 'LeBreton Flats Park',
@@ -84,7 +103,6 @@ export const concerts: Concert[] = [
     isFestival: true,
   },
   {
-    number: 96,
     artists: ['We Are Scientists'],
     headline: 'We Are Scientists',
     venue: 'Unknown venue',
@@ -94,7 +112,6 @@ export const concerts: Concert[] = [
     notes: 'Near London, 2010–2012. Exact date and venue unconfirmed.',
   },
   {
-    number: 95,
     artists: ['Movements', 'Turnover', 'Queen of Jeans'],
     headline: 'Movements',
     venue: 'The Pearl',
@@ -103,7 +120,6 @@ export const concerts: Concert[] = [
     year: 2024,
   },
   {
-    number: 94,
     artists: ['Movements', 'Good Charlotte', 'Silverstein', 'Palaye Royale'],
     headline: 'Movements',
     venue: 'Commodore Ballroom',
@@ -113,7 +129,6 @@ export const concerts: Concert[] = [
     notes: 'Spring 2017 Tour',
   },
   {
-    number: 93,
     artists: ['Capsize', 'To the Wind'],
     headline: 'Capsize',
     venue: 'The 333',
@@ -123,7 +138,6 @@ export const concerts: Concert[] = [
     notes: 'West Coast Tour February 2015',
   },
   {
-    number: 88,
     artists: ['Capsize'],
     headline: 'Capsize',
     venue: 'El Corazón',
@@ -133,7 +147,6 @@ export const concerts: Concert[] = [
     notes: 'The Polar Similar Tour',
   },
   {
-    number: 87,
     artists: ['Foxing', 'Gates'],
     headline: 'Foxing',
     venue: 'The 333',
@@ -142,7 +155,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 86,
     artists: ['The Postal Service', 'Death Cab for Cutie', 'The Beths'],
     headline: 'The Postal Service',
     venue: 'Climate Pledge Arena',
@@ -152,7 +164,6 @@ export const concerts: Concert[] = [
     notes: 'Give Up/Transatlanticism 20th Anniversary Tour',
   },
   {
-    number: 85,
     artists: ['Turnover', 'Balance and Composure', 'Tigers Jaw'],
     headline: 'Turnover',
     venue: 'The Moore Theatre',
@@ -162,7 +173,6 @@ export const concerts: Concert[] = [
     notes: 'Peripheral Vision 10 Year Anniversary Tour',
   },
   {
-    number: 84,
     artists: ['The Hotelier', 'Told Slant', 'Loone'],
     headline: 'The Hotelier',
     venue: 'The Vera Project',
@@ -171,7 +181,6 @@ export const concerts: Concert[] = [
     year: 2016,
   },
   {
-    number: 83,
     artists: ['The National', 'Alvvays'],
     headline: 'The National',
     venue: 'Deer Lake Park',
@@ -181,7 +190,6 @@ export const concerts: Concert[] = [
     notes: 'I Am Easy to Find Tour',
   },
   {
-    number: 82,
     artists: ['Bon Iver', 'Hurray for the Riff Raff'],
     headline: 'Bon Iver',
     venue: 'Deer Lake Park',
@@ -191,7 +199,6 @@ export const concerts: Concert[] = [
     notes: '22, A Million Tour',
   },
   {
-    number: 81,
     artists: ['Bring Me the Horizon', 'Parkway Drive', 'Architects', 'Deez Nuts', 'While She Sleeps'],
     headline: 'Bring Me the Horizon',
     venue: 'Commodore Ballroom',
@@ -200,7 +207,6 @@ export const concerts: Concert[] = [
     year: 2011,
   },
   {
-    number: 80,
     artists: ['3OH!3', 'A Day to Remember', 'Basement', 'Chiodos', 'Coheed and Cambria', 'Dance Gavin Dance', 'Fall Out Boy', 'Jimmy Eat World', 'Killswitch Engage', 'LS Dunes', 'My Chemical Romance', 'Movements', 'Red Jumpsuit Apparatus', 'Saosin', 'Silverstein', 'The Used', 'Underoath'],
     headline: 'When We Were Young 2024',
     venue: 'Las Vegas Festival Grounds',
@@ -211,7 +217,6 @@ export const concerts: Concert[] = [
     isFestival: true,
   },
   {
-    number: 79,
     artists: ['Chiodos', 'Saosin', 'Underoath'],
     headline: 'Warped Tour 2009',
     venue: 'Race City Speedway',
@@ -222,7 +227,6 @@ export const concerts: Concert[] = [
     isFestival: true,
   },
   {
-    number: 78,
     artists: ['Touché Amoré', 'Thursday', 'Basement', 'Cities Aviv'],
     headline: 'Touché Amoré',
     venue: 'Showbox SoDo',
@@ -231,7 +235,6 @@ export const concerts: Concert[] = [
     year: 2017,
   },
   {
-    number: 77,
     artists: ['Touché Amoré', 'mewithoutYou', 'Seahaven', 'Drug Church'],
     headline: 'Touché Amoré',
     venue: 'Neumos',
@@ -240,7 +243,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 76,
     artists: ['Touché Amoré', 'Turnstile', 'Culture Abuse', 'Razorbump', 'Odd Man Out'],
     headline: 'Touché Amoré',
     venue: 'El Corazón',
@@ -249,7 +251,6 @@ export const concerts: Concert[] = [
     year: 2018,
   },
   {
-    number: 75,
     artists: ['Being as an Ocean', 'Hundredth', 'Trophy Eyes'],
     headline: 'Being as an Ocean',
     venue: 'El Corazón',
@@ -258,7 +259,6 @@ export const concerts: Concert[] = [
     year: 2016,
   },
   {
-    number: 75,
     artists: ['Counterparts', 'Expire', 'Gideon', 'Knocked Loose'],
     headline: 'Counterparts',
     venue: 'The Cobalt',
@@ -267,7 +267,6 @@ export const concerts: Concert[] = [
     year: 2016,
   },
   {
-    number: 74,
     artists: ['La Dispute', 'Pictoria Vark', 'Sweet Pill'],
     headline: 'La Dispute',
     venue: 'Vogue Theatre',
@@ -277,7 +276,6 @@ export const concerts: Concert[] = [
     notes: 'Wildlife 10+1 Tour',
   },
   {
-    number: 72,
     artists: ['La Dispute', 'Gouge Away', 'Slow Mass'],
     headline: 'La Dispute',
     venue: 'Vogue Theatre',
@@ -286,7 +284,6 @@ export const concerts: Concert[] = [
     year: 2019,
   },
   {
-    number: 71,
     artists: ['Touché Amoré', 'Vein.fm', 'Militarie Gun', 'Scowl'],
     headline: 'Touché Amoré',
     venue: 'Rickshaw Theatre',
@@ -295,7 +292,6 @@ export const concerts: Concert[] = [
     year: 2022,
   },
   {
-    number: 70,
     artists: ['La Dispute', 'From Indian Lakes', 'Flooding'],
     headline: 'La Dispute',
     venue: 'Neptune Theatre',
@@ -304,7 +300,6 @@ export const concerts: Concert[] = [
     year: 2026,
   },
   {
-    number: 69,
     artists: ['Brand New'],
     headline: 'Brand New',
     venue: 'WaMu Theater',
@@ -314,7 +309,6 @@ export const concerts: Concert[] = [
     notes: '2025 Tour',
   },
   {
-    number: 68,
     artists: ['Thrice', 'Modern Color', 'Downward'],
     headline: 'Thrice',
     venue: 'Commodore Ballroom',
@@ -323,7 +317,6 @@ export const concerts: Concert[] = [
     year: 2025,
   },
   {
-    number: 67,
     artists: ['Basement', 'The Front Bottoms', 'Bad Bad Hats'],
     headline: 'Basement',
     venue: 'Neptune Theatre',
@@ -332,7 +325,6 @@ export const concerts: Concert[] = [
     year: 2017,
   },
   {
-    number: 66,
     artists: ['Bring Me the Horizon', 'Underoath', 'Beartooth'],
     headline: 'Bring Me the Horizon',
     venue: 'WaMu Theater',
@@ -341,7 +333,6 @@ export const concerts: Concert[] = [
     year: 2017,
   },
   {
-    number: 65,
     artists: ['Circa Survive', 'mewithoutYou', 'Turnover'],
     headline: 'Circa Survive',
     venue: 'Showbox SoDo',
@@ -350,7 +341,6 @@ export const concerts: Concert[] = [
     year: 2017,
   },
   {
-    number: 64,
     artists: ['Into It. Over It.', 'The World Is a Beautiful Place', 'Sidekicks', 'Pinegrove'],
     headline: 'Into It. Over It.',
     venue: 'The Crocodile',
@@ -359,7 +349,6 @@ export const concerts: Concert[] = [
     year: 2016,
   },
   {
-    number: 63,
     artists: ['Sigur Rós'],
     headline: 'Sigur Rós',
     venue: 'Queen Elizabeth Theatre',
@@ -369,7 +358,6 @@ export const concerts: Concert[] = [
     notes: '2016 North American Tour',
   },
   {
-    number: 62,
     artists: ['Thrice', 'La Dispute', 'nothing,nowhere.'],
     headline: 'Thrice',
     venue: 'Commodore Ballroom',
@@ -378,7 +366,6 @@ export const concerts: Concert[] = [
     year: 2016,
   },
   {
-    number: 61,
     artists: ['Thrice', 'La Dispute', 'nothing,nowhere.'],
     headline: 'Thrice',
     venue: 'Showbox SoDo',
@@ -387,7 +374,6 @@ export const concerts: Concert[] = [
     year: 2016,
   },
   {
-    number: 60,
     artists: ['Brand New', 'mewithoutYou'],
     headline: 'Brand New',
     venue: 'Vogue Theatre',
@@ -397,7 +383,6 @@ export const concerts: Concert[] = [
     notes: '2016 Canadian Tour',
   },
   {
-    number: 59,
     artists: ['Being as an Ocean', 'Silverstein', 'Emarosa', 'Youth Decay', 'Rarity'],
     headline: 'Being as an Ocean',
     venue: 'The Imperial',
@@ -406,7 +391,6 @@ export const concerts: Concert[] = [
     year: 2016,
   },
   {
-    number: 58,
     artists: ['American Football', 'David Bazan'],
     headline: 'American Football',
     venue: 'Neptune Theatre',
@@ -415,7 +399,6 @@ export const concerts: Concert[] = [
     year: 2016,
   },
   {
-    number: 57,
     artists: ['La Dispute', 'Gouge Away'],
     headline: 'La Dispute',
     venue: 'El Corazón',
@@ -424,7 +407,6 @@ export const concerts: Concert[] = [
     year: 2019,
   },
   {
-    number: 55,
     artists: ['Defeater', 'Counterparts', 'Capsize', 'Better Off', 'Hotel Books'],
     headline: 'Defeater',
     venue: 'El Corazón',
@@ -433,7 +415,6 @@ export const concerts: Concert[] = [
     year: 2015,
   },
   {
-    number: 54,
     artists: ['This Will Destroy You'],
     headline: 'This Will Destroy You',
     venue: 'Electric Owl',
@@ -443,7 +424,6 @@ export const concerts: Concert[] = [
     notes: 'Another Language tour',
   },
   {
-    number: 53,
     artists: ['The World Is a Beautiful Place', 'Foxing', 'TTNG', 'Brightside', 'Great Grandpa'],
     headline: 'The World Is a Beautiful Place',
     venue: 'The Vera Project',
@@ -452,7 +432,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 52,
     artists: ['Circa Survive', 'Title Fight', 'Tera Melos'],
     headline: 'Circa Survive',
     venue: 'Showbox SoDo',
@@ -461,7 +440,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 51,
     artists: ['Tokyo Police Club', 'Said the Whale', 'Pack A.D.'],
     headline: 'Tokyo Police Club',
     venue: 'Commodore Ballroom',
@@ -471,7 +449,6 @@ export const concerts: Concert[] = [
     notes: 'Two shows (all-ages & 19+)',
   },
   {
-    number: 50,
     artists: ['alt-J', 'The Acid'],
     headline: 'alt-J',
     venue: 'Orpheum Theatre',
@@ -481,7 +458,6 @@ export const concerts: Concert[] = [
     notes: 'This Is All Yours Tour',
   },
   {
-    number: 49,
     artists: ['Being as an Ocean', 'Fit for a King', 'Gideon', 'Wolves at the Gate', 'Capsize'],
     headline: 'Being as an Ocean',
     venue: 'Studio Seven',
@@ -490,7 +466,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 48,
     artists: ['Brand New'],
     headline: 'Brand New',
     venue: 'Vogue Theatre',
@@ -499,7 +474,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 47,
     artists: ['La Dispute'],
     headline: 'La Dispute',
     venue: 'Bush Hall',
@@ -508,7 +482,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 46,
     artists: ['La Dispute'],
     headline: 'La Dispute',
     venue: 'Bush Hall',
@@ -517,7 +490,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 45,
     artists: ['Bring Me the Horizon', 'Of Mice & Men', 'letlive.', 'Issues'],
     headline: 'Bring Me the Horizon',
     venue: 'Vogue Theatre',
@@ -526,7 +498,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 44,
     artists: ['La Dispute', 'Pianos Become the Teeth', 'Mansions'],
     headline: 'La Dispute',
     venue: 'El Corazón',
@@ -536,7 +507,6 @@ export const concerts: Concert[] = [
     notes: 'Rooms of the House Tour',
   },
   {
-    number: 42,
     artists: ['Protest the Hero', 'Architects', 'Affiance', 'The Kindred'],
     headline: 'Protest the Hero',
     venue: 'Vogue Theatre',
@@ -545,7 +515,6 @@ export const concerts: Concert[] = [
     year: 2013,
   },
   {
-    number: 41,
     artists: ['Architects', 'Being as an Ocean', 'Stray From the Path', 'My Ticket Home'],
     headline: 'Architects',
     venue: 'Rio Theatre',
@@ -554,7 +523,6 @@ export const concerts: Concert[] = [
     year: 2014,
   },
   {
-    number: 40,
     artists: ['AFI', 'Touché Amoré', 'Coming'],
     headline: 'AFI',
     venue: 'Commodore Ballroom',
@@ -563,7 +531,6 @@ export const concerts: Concert[] = [
     year: 2013,
   },
   {
-    number: 39,
     artists: ['The National', 'Frightened Rabbit'],
     headline: 'The National',
     venue: 'PNE Amphitheatre',
@@ -572,7 +539,6 @@ export const concerts: Concert[] = [
     year: 2013,
   },
   {
-    number: 38,
     artists: ['Sufjan Stevens'],
     headline: 'Sufjan Stevens',
     venue: 'The Orpheum',
@@ -582,7 +548,6 @@ export const concerts: Concert[] = [
     notes: 'Carrie & Lowell Tour',
   },
   {
-    number: 37,
     artists: ['Saves the Day', 'Into It. Over It.', 'Hostage Calm'],
     headline: 'Saves the Day',
     venue: 'Biltmore Cabaret',
@@ -591,7 +556,6 @@ export const concerts: Concert[] = [
     year: 2013,
   },
   {
-    number: 36,
     artists: ['The xx'],
     headline: 'The xx',
     venue: 'Queen Elizabeth Theatre',
@@ -601,7 +565,6 @@ export const concerts: Concert[] = [
     notes: 'Coexist Tour',
   },
   {
-    number: 35,
     artists: ['alt-J'],
     headline: 'alt-J',
     venue: 'Commodore Ballroom',
@@ -611,7 +574,6 @@ export const concerts: Concert[] = [
     notes: 'An Awesome Wave Tour',
   },
   {
-    number: 34,
     artists: ['3OH!3', 'August Burns Red', 'Blessthefall', 'Bring Me the Horizon', 'Chiodos', 'Defeater', 'Hawthorne Heights', 'Silverstein', 'The Summer Set'],
     headline: 'Warped Tour 2013',
     venue: 'The Flats at Molson Canadian Amphitheatre',
@@ -622,7 +584,6 @@ export const concerts: Concert[] = [
     isFestival: true,
   },
   {
-    number: 33,
     artists: ['Alexisonfire'],
     headline: 'Alexisonfire',
     venue: 'Edmonton Event Centre, West Edmonton Mall',
@@ -632,7 +593,6 @@ export const concerts: Concert[] = [
     notes: 'Farewell Tour',
   },
   {
-    number: 32,
     artists: ['A Day to Remember', 'Attack Attack!', 'August Burns Red', 'D.R.U.G.S.', 'Dance Gavin Dance', 'Enter Shikari', 'NeverShoutNever', 'Of Mice & Men', 'The Devil Wears Prada', '3OH!3'],
     headline: 'Warped Tour 2011',
     venue: 'Arrow Hall',
@@ -643,7 +603,6 @@ export const concerts: Concert[] = [
     isFestival: true,
   },
   {
-    number: 31,
     artists: ['Sufjan Stevens'],
     headline: 'Sufjan Stevens',
     venue: 'The Orpheum',
@@ -653,7 +612,6 @@ export const concerts: Concert[] = [
     notes: 'Age of Adz Tour',
   },
   {
-    number: 30,
     artists: ['Bring Me the Horizon', 'Parkway Drive', 'Alesana', 'The Word Alive', 'In Fear and Faith'],
     headline: 'Warped Tour 2010',
     venue: 'Northlands Grounds',
@@ -664,7 +622,6 @@ export const concerts: Concert[] = [
     isFestival: true,
   },
   {
-    number: 29,
     artists: ['Jimmy Eat World'],
     headline: 'Jimmy Eat World',
     venue: "Red's / Edmonton Event Centre, West Edmonton Mall",
@@ -674,7 +631,6 @@ export const concerts: Concert[] = [
     notes: 'Chase This Light Tour',
   },
   {
-    number: 28,
     artists: ['Coheed and Cambria'],
     headline: 'Coheed and Cambria',
     venue: "Red's / Edmonton Event Centre, West Edmonton Mall",
@@ -685,37 +641,24 @@ export const concerts: Concert[] = [
   },
 ];
 
+// Derive artist appearance counts from concerts array
+const artistCounts: Record<string, number> = {};
+for (const concert of concerts) {
+  for (const artist of concert.artists) {
+    artistCounts[artist] = (artistCounts[artist] || 0) + 1;
+  }
+}
+
 // Artists seen 2+ times
-const MULTI_SEEN = new Set([
-  'La Dispute', 'Touché Amoré', 'Thrice', 'Silverstein', 'Being as an Ocean',
-  'Brand New', 'A Day to Remember', 'August Burns Red', '3OH!3', 'Turnover',
-  'The National', 'Architects', 'Basement', 'Bring Me the Horizon', 'Chiodos',
-  'Circa Survive', 'Coheed and Cambria', 'Dance Gavin Dance', 'Defeater',
-  'Jimmy Eat World', 'Saosin', 'Underoath', 'Sufjan Stevens', 'mewithoutYou',
-  'Parkway Drive', 'Counterparts', 'Gideon', 'Gouge Away', 'Into It. Over It.',
-  'The World Is a Beautiful Place', 'nothing,nowhere.', 'Capsize', 'alt-J',
-  'Of Mice & Men', 'Foxing', 'Seahaven', 'Movements', 'Death Cab for Cutie', 'Enter Shikari',
-]);
+const MULTI_SEEN = new Set(
+  Object.entries(artistCounts)
+    .filter(([, count]) => count >= 2)
+    .map(([artist]) => artist)
+);
 
-// Times seen tally
-const countMap: Record<string, number> = {
-  'La Dispute': 9, 'Bring Me the Horizon': 5, 'Touché Amoré': 5,
-  'Being as an Ocean': 4, 'Foxing': 3, 'Capsize': 4, 'Architects': 3,
-  '3OH!3': 3, 'Basement': 3, 'Chiodos': 3, 'Silverstein': 3, 'Underoath': 3,
-  'mewithoutYou': 3, 'Brand New': 3, 'Thrice': 3, 'August Burns Red': 3,
-  'Seahaven': 2, 'Movements': 3, 'Turnover': 3, 'Death Cab for Cutie': 2, 'Enter Shikari': 2, 'The National': 2, 'Parkway Drive': 2,
-  'A Day to Remember': 2, 'Coheed and Cambria': 2, 'Dance Gavin Dance': 2,
-  'Jimmy Eat World': 2, 'Saosin': 2, 'Counterparts': 2, 'Gideon': 2,
-  'Gouge Away': 2, 'Circa Survive': 2, 'Into It. Over It.': 2,
-  'The World Is a Beautiful Place': 2, 'nothing,nowhere.': 2, 'Defeater': 2,
-  'alt-J': 2, 'Of Mice & Men': 2, 'Sufjan Stevens': 2,
-};
-
-export const graphNodes: GraphNode[] = Object.entries(countMap).map(([id, count]) => ({
-  id,
-  label: id,
-  count,
-}));
+export const graphNodes: GraphNode[] = Object.entries(artistCounts)
+  .filter(([, count]) => count >= 2)
+  .map(([id, count]) => ({ id, label: id, count }));
 
 // Compute shared-bill edges between multi-seen artists
 const edgeTally: Record<string, number> = {};

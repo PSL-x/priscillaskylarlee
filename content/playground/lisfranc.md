@@ -1,29 +1,28 @@
 ---
 title: "Lisfranc"
 date: "2026-04-30"
-tags: ["health", "triathlon", "making"]
-excerpt: "What a Lisfranc injury took, what it taught, and what I'm still figuring out."
+tags: ["health/sports", "thoughts for the void"]
+excerpt: "My first surgery – the incredibly obscure injury that made 2025 a very mentally tough year."
+images:
+  - "/images/playground/lisfranc-xray.jpg"
 ---
 
-# Lisfranc
 
-The Lisfranc joint is where the metatarsal bones in the forefoot meet the tarsal bones in the midfoot, held together by a set of ligaments most people don't know exist until one of them fails. The injury is frequently misdiagnosed as a sprain because it doesn't look dramatic on a regular X-ray. Mine wasn't a sprain.
+The Lisfranc joint is where the metatarsal bones in the forefoot meet the tarsal bones in the midfoot, held together by a set of ligaments most people don't know exist until one of them fails. It's considered a "fracture", and is frequently misdiagnosed as a sprain since it doesn't show much on a regular X-ray. 
 
-In June 2025 I had surgery on my foot. Non-weight bearing until August, walking again in late August, with a triathlon already registered for September.
-
-I did the triathlon anyway.
+In June 2025 I had surgery on my foot. It was my first surgery, which was really quite daunting, and I had to decide if it was something I really wanted or not. In the end, I went for it, which meant I was non-weight bearing until August... with a triathlon already registered for at the beginning of September.
 
 ## What I lost
 
-The obvious loss was mobility. For weeks I couldn't walk, couldn't exercise, couldn't do basic things for myself, and not just physically: it does something to your sense of self when you can't move through the world the way you're used to.
+Obviously I wasn't able to move around very well. I was instructed to spend minimal time on my crutches (blood rush to the foot) and that under arm pain is real. For weeks I couldn't walk, couldn't exercise, couldn't do basic things (washing dishes was really difficult?), and not just physically – it does something to your sense of self when you don't feel like you're a contributing member of society. I was definitely in a bit of a dark place.
 
-The less obvious loss was community. The injury meant retiring from dodgeball, a sport I'd played for years, and when you leave a sport you don't just lose the game. You lose the people, the schedule, the version of yourself that showed up every week.
+The less obvious loss was community. The injury meant deciding to retire from dodgeball, a sport I'd played for years, and the first thing I really felt I "had" once moving to Vancouver. I went from seeing teammates and friends 4-6 days a week to trying to decide if I should go to watch playoffs, because I knew I'd feel like I was missing out.
 
 ## The triathlon
 
-The race was September 6, 2025, about ten days after I was cleared to walk. My physio knew I was going. She wasn't particularly pleased.
+The race was September 6, 2025, about ten days after I was cleared to walk by my surgeon. He was ok with the swimming and cycling, but was concerned about the run. Both him and my physio told me that I should walk the 'run' portion.
 
-I swam, I cycled, and then I walked the entire 10k run portion. The spectators didn't know; they were cheering at the side of the course, telling me to keep running, saying I was almost there. I knew I wasn't allowed to run. I smiled and kept walking.
+So... I did. I swam, I cycled, and then I walked the entire 10k run portion. The spectators didn't know; they were cheering at the side of the course, telling me to keep running, saying I was almost there. I knew I wasn't allowed to run. I smiled and kept walking.
 
 I didn't finish last.
 

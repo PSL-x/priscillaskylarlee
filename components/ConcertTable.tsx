@@ -7,7 +7,7 @@ interface Props {
   concerts: Concert[];
 }
 
-type SortKey = 'date' | 'number';
+type SortKey = 'date';
 type SortDir = 'asc' | 'desc';
 
 const formatDate = (iso: string) => {
@@ -50,7 +50,6 @@ export default function ConcertTable({ concerts }: Props) {
     return [...result].sort((a, b) => {
       let cmp = 0;
       if (sortKey === 'date') cmp = new Date(a.date).getTime() - new Date(b.date).getTime();
-      if (sortKey === 'number') cmp = a.number - b.number;
       return sortDir === 'asc' ? cmp : -cmp;
     });
   }, [concerts, yearFilter, cityFilter, sortKey, sortDir]);
@@ -60,7 +59,7 @@ export default function ConcertTable({ concerts }: Props) {
       setSortDir(d => d === 'asc' ? 'desc' : 'asc');
     } else {
       setSortKey(key);
-      setSortDir(key === 'date' ? 'desc' : 'asc');
+      setSortDir('desc');
     }
   };
 
@@ -126,11 +125,6 @@ export default function ConcertTable({ concerts }: Props) {
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
-            <th style={{ ...thStyle, width: '2.5rem' }}>
-              <button style={sortBtnStyle} onClick={() => handleSort('number')} aria-sort={sortKey === 'number' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}>
-                #{sortIndicator('number')}
-              </button>
-            </th>
             <th style={thStyle}>Artist</th>
             <th style={{ ...thStyle }} className="venue-col">Venue</th>
             <th style={{ ...thStyle, width: '7rem' }}>City</th>
@@ -150,9 +144,6 @@ export default function ConcertTable({ concerts }: Props) {
               onMouseEnter={e => (e.currentTarget.style.background = 'var(--tag-bg)')}
               onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
             >
-              <td style={{ padding: 'var(--space-1) 0', fontSize: 'var(--text-xs)', color: 'var(--muted)', fontFamily: 'var(--font-mono)', verticalAlign: 'top' }}>
-                {concert.number}
-              </td>
               <td style={{ padding: 'var(--space-1) var(--space-2) var(--space-1) 0', verticalAlign: 'top' }}>
                 <div style={{ fontSize: 'var(--text-sm)', color: 'var(--foreground)' }}>
                   {concert.isFestival ? <em style={{ color: 'var(--muted)' }}>{concert.headline}</em> : concert.headline}
