@@ -1,7 +1,7 @@
 ---
 title: "Consistency and Standardization"
 company: "SAP"
-year: "2024"
+year: "2024 - Present"
 tags: ["Design Systems", "Strategy", "Design Ops"]
 coverImage: "/images/work/consistency-standardization-cover.png"
 summary: "Driving adoption and alignment of SAP design standards across the Data & Analytics product suite."
